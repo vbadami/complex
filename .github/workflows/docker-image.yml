@@ -14,11 +14,11 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker client image
-      run: docker build ./client --file Dockerfile --tag vinaybadami/docker-course-client:latest
+      run: docker build ./client/ --tag vinaybadami/docker-course-client:latest
     - name: Build the Docker server image
-      run: docker build ./server --file Dockerfile --tag vinaybadami/docker-course-server:latest
+      run: docker build ./server/ --tag vinaybadami/docker-course-server:latest
     - name: Build the Docker worker image
-      run: docker build ./worker --file Dockerfile --tag vinaybadami/docker-course-worker:latest
+      run: docker build ./worker/ --tag vinaybadami/docker-course-worker:latest
 
     - name: push
       run: |
