@@ -15,4 +15,5 @@ jobs:
       run: docker build ./client --file Dockerfile --tag vinaybadami/docker-course-client:latest
     - name: push
       run: |
+        docker login -u vinaybadami -p ${{secrets.DOCKERHUB_TOKEN}}
         docker push vinaybadami/docker-course-client:latest
