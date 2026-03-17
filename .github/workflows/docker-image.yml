@@ -24,3 +24,5 @@ jobs:
       run: |
         docker login -u vinaybadami -p ${{secrets.DOCKERHUB_TOKEN}}
         docker push vinaybadami/docker-course-client:latest
+        docker push vinaybadami/docker-course-server:latest
+        docker push vinaybadami/docker-course-worker:latest
